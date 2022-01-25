@@ -33,16 +33,21 @@ void loop() {
     if(i>=3)
     {
       digitalWrite(LEDGreen, HIGH); 
+      digitalWrite(LEDBlue, HIGH); 
       delay(500); 
       digitalWrite(LEDGreen, LOW);
+      digitalWrite(LEDBlue, LOW);
       delay(500);
-      
     }
 
     if(i>=5)
     {
-      digitalWrite(LEDRed, HIGH); 
-      delay(250); 
+      digitalWrite(LEDRed, HIGH);
+      digitalWrite(LEDGreen, HIGH); 
+      digitalWrite(LEDBlue, HIGH); 
+      delay(500); 
+      digitalWrite(LEDGreen, LOW);
+      digitalWrite(LEDBlue, LOW);
       digitalWrite(LEDRed, LOW);
       delay(250);
       
@@ -61,6 +66,12 @@ void loop() {
       delay(500); 
       digitalWrite(LEDGreen, LOW);
       delay(500);
+      digitalWrite(LEDGreen, HIGH); 
+      digitalWrite(LEDBlue, HIGH); 
+      delay(500); 
+      digitalWrite(LEDGreen, LOW);
+      digitalWrite(LEDBlue, LOW);
+      delay(500);
     }
 
     if(i>=5)
@@ -69,6 +80,7 @@ void loop() {
       delay(250); 
       digitalWrite(LEDRed, LOW);
       delay(250);
+      
       
     }
 
