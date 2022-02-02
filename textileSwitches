@@ -1,0 +1,41 @@
+/*
+ * The idea is if a bag closes the circuit breaks 
+ * 
+*/
+
+ 
+
+// constants won't change. They're used here to set pin numbers:
+const int buttonPin = 2;     // the pin that is used for the circuit 
+const int ledOff = 7;  // LED for an uncompleted switch (when the bag is open) 
+const int ledOn = 6; // LED for a completed switch  (when the bag is closed)
+
+// variables will change:
+int buttonState = 0;         // variable for reading the pushbutton status
+
+
+
+void setup() {
+  // initialize the LED pin as an output:
+  pinMode(ledOn, OUTPUT);
+  pinMode(ledOff, OUTPUT);
+
+  // initialize the pushbutton pin as an input:
+  pinMode(buttonPin, INPUT);
+}
+
+void loop() {
+  // read the state of the pushbutton value:
+  buttonState = digitalRead(buttonPin);
+
+  // check if the pushbutton is pressed. If it is, the buttonState is HIGH:
+  if (buttonState == HIGH) {
+    // turn LED on:
+    digitalWrite(ledOn, HIGH);
+    digitalWrite(ledOff, LOW);
+  } else {
+    // turn LED off:
+    digitalWrite(ledOn, LOW);
+    digitalWrite(ledOff, HIGH);
+  }
+}
