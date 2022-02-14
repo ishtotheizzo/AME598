@@ -47,7 +47,11 @@ void setup() {
 
 }
 
+
+
 void loop() {
+  
+  // this is the "SIGNAL SUCCESSFUL" 
 
    if(blue == true && green == true && red == true)
   {
@@ -59,7 +63,6 @@ void loop() {
   }
 
 
-// RESET THE GAME IF NEED BE 
 
 
 
@@ -68,7 +71,8 @@ void loop() {
   Serial.print("sensor value: ");
   Serial.println(value);
 
-
+// this is if the signal is too low 
+  
   if(value <=256) 
   {
      
@@ -77,6 +81,8 @@ void loop() {
     
   } 
 
+  
+  // if in range of "blue"
   if(value>256 && value<=512)
   {
     mapBlue = map(value, 0, 512, 0, 255);  
@@ -92,9 +98,11 @@ void loop() {
       
     }
 
-  
   }
 
+  // this is the range for Green 
+  
+  
  if(value>512 && value<=768)
  {
   mapGreen = map(value, 513, 768, 0, 255); 
@@ -109,6 +117,8 @@ void loop() {
   }
  }
 
+  
+  // this is the range for red 
 if(value > 768 && 1024) 
 {
   mapRed = map(value, 769, 1000, 0, 255); 
@@ -129,6 +139,9 @@ if(value > 768 && 1024)
   
   
 }
+
+
+// this function handles the digital outputs of the lights because the code was too long 
 
 void establishConnection () 
 {
