@@ -1,9 +1,10 @@
-//THE PENANT MAN SHALLPASS
+//THE PENITENT MAN SHALL PASS
 
 
-int wirePin = 9; 
-int dial = A0; 
-int LEDGreen = 3; 
+// inputs 
+int wirePin = 9; //wire write  
+int dial = A0;  //pentiometer to control how "penitent" you are 
+int LEDGreen = 3;  // LED to represent your "ascention" 
 
 
 
